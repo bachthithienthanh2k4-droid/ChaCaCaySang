@@ -1,25 +1,28 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
 import Link from 'next/link';
 import { newsData } from '@/app/data/news'; 
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.15 },
   },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
+    transition: { 
+      duration: 0.5, 
+      ease: "easeOut" 
+    }
+  }
 };
 
 export default function SmoothNewsSection() {
