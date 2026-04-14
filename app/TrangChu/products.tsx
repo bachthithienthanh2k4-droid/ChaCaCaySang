@@ -141,7 +141,7 @@ export default function Products() {
 
           <div className="flex flex-col sm:flex-row gap-3 pt-3">
             <button
-              onClick={() => addToCart({ ...product, name: product.title, image: product.img, quantity: 1 })}
+              onClick={() => addToCart({ ...product, name: product.title, image: product.img })}
               className="flex-1 flex items-center justify-center gap-2 bg-slate-900 text-white px-6 py-3.5 rounded-xl font-bold transition-all hover:bg-sky-600 hover:shadow-lg active:scale-95"
             >
               <ShoppingCart size={18} />
